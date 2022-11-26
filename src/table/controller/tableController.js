@@ -1,5 +1,5 @@
 const path = require('path');
 
 module.exports = (req, res) => {
-    res.render("index", {title: "Express.js"});
+    res.render("tables", {title: "table"});
 };
