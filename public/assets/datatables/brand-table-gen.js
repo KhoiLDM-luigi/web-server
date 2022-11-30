@@ -9,6 +9,10 @@ $(document).ready(() => {
             {title: 'Hãng'},
             {title: 'Ngày thêm'},
             {title: 'Số lượng sản phẩm'}
+        ],
+        dom: 'Bfrtip',
+        buttons: [
+            'csv', 'excel', 'pdf'
         ]
         //data: dataSet
     });

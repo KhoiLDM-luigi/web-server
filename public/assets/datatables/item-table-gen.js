@@ -1,3 +1,9 @@
+var dataSet = [
+    ['001', 'red', 'aaa', '01/01/2001', '01/02/2001', '11'],
+    ['002', 'blue', 'aaa', '01/01/2001', '01/02/2001', '11'],
+    ['003', 'green', 'aaa', '01/01/2001', '01/02/2001', '11']
+]
+
 $(document).ready(() => {
     $('#item-table').DataTable({
         "language": {
@@ -10,7 +16,14 @@ $(document).ready(() => {
             {title: 'Ngày thêm'},
             {title: 'Ngày nhập hàng'},
             {title: 'Sô lượng'}
-        ]   
-        //data: dataSet
+        ],
+        dom: 'Bfrtip',
+        buttons: [
+            'csv', 'excel', 'pdf'
+        ],
+        data: dataSet
+    });
+    $('#item-table').on('click', 'tbody tr', () => {
+        window.location.href = '/shop-items/info';
     });
 });

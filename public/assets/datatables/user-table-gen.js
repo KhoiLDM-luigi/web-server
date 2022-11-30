@@ -18,6 +18,10 @@ $(document).ready(() => {
             {title: 'Email'},
             {title: 'Ngày khởi tạo'}
         ],
+        dom: 'Bfrtip',
+        buttons: [
+            'csv', 'excel', 'pdf'
+        ],
         data: dataSet
     });
     // $('#user-table tbody tr').click(() => {
